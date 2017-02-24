@@ -33,7 +33,7 @@
 ![alt text][image1]
 ---
 
-### ** Potential Shortcomings**
+### **Potential Shortcomings**
 
 #### 1. Shortcomings:
 This method still not robost enough to deal with images with sharp turn, this kind of lines will filter out by the slope filter. And if the image have bridge-like structures along with the road, the method also will confused, cause hough line will not filter that out.
