@@ -136,9 +136,12 @@ If a well known architecture was chosen:
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
+<img src="./images/do-not-enter.png" alt="alt text" width="300" height="300">
+<img src="./images/keepright.png" alt="alt text" width="300" height="300">
+<img src="./images/speedlimit-30.png" alt="alt text" width="300" height="300">
+<img src="./images/stop.png" alt="alt text" width="300" height="300">
+<img src="./images/yield.png" alt="alt text" width="300" height="300">
 
-![alt text](./images/do-not-enter.png) ![alt text](./images/keepright.png) ![alt text](./images/speedlimit-30.png)
-![alt text](./images/stop.png) ![alt text](./images/yield.png)
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
