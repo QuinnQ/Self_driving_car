@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
 
 **Build a Traffic Sign Recognition Project**
@@ -13,7 +13,7 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
 ####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
@@ -165,8 +165,12 @@ Image: ./images/yield.png, prediction result: Yield
 | 30 km/h	      		| Roundabout mandatory					 				|
 | Do not enter			| Priority road      							|
 
-
 The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. This compares favorably to the accuracy on the test set of 91%
+
+And the factors that might affect the classification difficulties are:
+1. The angle of the traffic sign. For example the Speedlimit 30 one and Yield traffic sign.
+2. The training data not contains enough data for some traffic sign. So training the data for 20 epoches may overfit the data.
+3. The picture contrast may also an effect for that. Normalization of the pictures may need further improvement.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
