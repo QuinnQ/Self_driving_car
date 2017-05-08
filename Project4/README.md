@@ -58,13 +58,13 @@ The code for my perspective transform includes a function called `warper()`, whi
 
 ```python
 src = np.float32([[690, 450], 
-					[1110, undist.shape[0]], 
-					[220, undist.shape[0]], [
-					600, 450]])
+				[1110, undist.shape[0]], 
+				[220, undist.shape[0]], [
+				600, 450]])
 dst = np.float32([[1040, 0], 
-					 [1040, undist.shape[0]], 
-					 [180, undist.shape[0]], 
-					 [180, 0]])
+				[1040, undist.shape[0]], 
+				[180, undist.shape[0]], 
+				[180, 0]])
 ```
 
 This resulted in the following source and destination points:
