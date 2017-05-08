@@ -111,8 +111,19 @@ def pipeline(img):
     newWarp = cv2.warpPerspective(color_warp, Minv, (undist.shape[1], undist.shape[0]), flags=cv2.INTER_LINEAR)
     # Combine the result with original image
     result = cv2.addWeighted(undist, 1, newWarp, 0.3, 0)
-    cv2.putText(result, 'left: %.2f m, right: %.2f m' % (lines['left'].radius, lines['right'].radius),
+
+    lane_curvature = np.mean((lines['left'].radius, lines['right'].radius))
+    cv2.putText(result, 'Lane curvature: %.2f m' % lane_curvature,
                 (300, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 2)
+    center = xm_per_pix*640
+    cur_car = (lines['right'].base_pos - lines['left'].base_pos)/2 + lines['left'].base_pos
+    if cur_car - center > 0:
+        cur_pos = 'right'
+    else:
+        cur_pos = 'left'
+    cv2.putText(result, 'Car is in %s of center: %.2f m' %
+                (cur_pos, np.absolute(cur_car-center)),
+                (300, 100), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 2)
     return result
 
 

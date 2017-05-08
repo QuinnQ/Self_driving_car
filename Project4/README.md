@@ -134,6 +134,8 @@ I implemented this step in lines 84 through 107 in my code in `pipeline.py` in t
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video.
 
+![alt text][video1]
+
 Here's a [link to my video result](./project_output.mp4)
 
 ---
