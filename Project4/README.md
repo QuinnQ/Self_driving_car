@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [image8]: ./readme_images/slide_window_search.png "Combined all thresholds"
 [image9]: ./readme_images/processed.png "Processed"
 [image10]: ./readme_images/final.png "Processed final image"
-[video1]: ./project_output_video.mp4 "Video"
+[video1]: ./project_output.mp4 "Video"
 
 ### Submitted files:
 1. camera_cal.py (For camera calibration)
@@ -134,7 +134,7 @@ I implemented this step in lines 84 through 107 in my code in `pipeline.py` in t
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video.
 
-Here's a [link to my video result](./output.mp4)
+Here's a [link to my video result](./project_output.mp4)
 
 ---
 
