@@ -47,25 +47,25 @@ def pipeline(img):
         threshold += 1
     filtered_boxes, heatmap = filter_bboxes(img, bboxes, threshold)
 
-    # if len(history_boxes) > 10:
-    #     history_boxes.pop(0)
-    #
-    # history_boxes.append(filtered_boxes)
-    # flatten = []
-    # [flatten.extend(el) for el in history_boxes]
-    # box_list, frame_heatmap = filter_bboxes(img, flatten, 1)
+    if len(history_boxes) > 10:
+        history_boxes.pop(0)
+
+    history_boxes.append(filtered_boxes)
+    flatten = []
+    [flatten.extend(el) for el in history_boxes]
+    box_list, frame_heatmap = filter_bboxes(img, flatten, 1)
     draw_img = draw_boxes(img, filtered_boxes)
     return draw_img
 
-test_img = mpimg.imread('./test_images/test6.jpg')
-draw_img = pipeline(test_img)
-plt.imshow(draw_img)
-plt.show()
+# test_img = mpimg.imread('./test_images/test6.jpg')
+# draw_img = pipeline(test_img)
+# plt.imshow(draw_img)
+# plt.show()
 
-# output = 'project5_output.mp4'
-# clip = VideoFileClip('project_output.mp4')
-# output_clip = clip.fl_image(pipeline)
-# output_clip.write_videofile(output, audio=False)
+output = 'project5_output.mp4'
+clip = VideoFileClip('project_output.mp4')
+output_clip = clip.fl_image(pipeline)
+output_clip.write_videofile(output, audio=False)
 
 
 # def visualize_hist(img1, nbins=32):
